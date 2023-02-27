@@ -1,13 +1,12 @@
 @extends('contacts.layout')
 @section('content')
-
+ 
 <div class="card">
-<div class="card-header"> Contact us page</div>
-
-<div ="card-body">
-
-<form action="{{url ('contact'}}" method="post">
-{!! csrf_field() !!}
+  <div class="card-header">Contactus Page</div>
+  <div class="card-body">
+      
+      <form action="{{ url('contact') }}" method="post">
+        {!! csrf_field() !!}
         <label>Name</label></br>
         <input type="text" name="name" id="name" class="form-control"></br>
         <label>Address</label></br>
@@ -15,11 +14,9 @@
         <label>Mobile</label></br>
         <input type="text" name="mobile" id="mobile" class="form-control"></br>
         <input type="submit" value="Save" class="btn btn-success"></br>
-
-
-</form>
-
+    </form>
+   
+  </div>
 </div>
-
-</div>
+ 
 @stop
